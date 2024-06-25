@@ -13,7 +13,7 @@ def WhoAmI():
 #2
 def getBondPrice(y, face, couponRate, m, ppy=1):
     t=np.arange(0,ppy*m)
-    cpn=couponRate*face
+    cpn=couponRate*face/ppy
     df=(1/(1+y/ppy))
     dft=[df**(i+1) for i in t]
     bondPrice=cpn*sum(dft)+dft[-1]*face
@@ -32,7 +32,7 @@ getBondPrice(y, face, couponRate, m, ppy=1)
 #3
 def getBondDuration(y, face, couponRate, m, ppy=1):
     t=np.arange(0,ppy*m)
-    cpn=couponRate*face
+    cpn=couponRate*face/ppy
     df=(1/(1+y/ppy))
     dft=[df**(i+1) for i in t]
     dftt=[df**(i+1) *(i+1) for i in t]

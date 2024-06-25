@@ -5,8 +5,9 @@ Created on Tue Jun 25 15:07:11 2024
 @author: surface
 """
 
-#4
 import numpy as np
+
+#4
 def FizzBuzz(start, finish):
     fbRange=np.arange(start,finish+1)
     mod3=np.mod(fbRange,3)
@@ -19,6 +20,3 @@ def FizzBuzz(start, finish):
     fizzbuzz[mod5Zeros]="buzz"
     fizzbuzz [np.intersect1d(mod3Zeros, mod5Zeros)]="fizzbuzz"
     return(fizzbuzz)
-
-#test value
-FizzBuzz(76,90)
